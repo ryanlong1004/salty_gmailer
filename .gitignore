@@ -1,0 +1,9 @@
+token.json
+credentials.json
+__pycache__
+docs/
+creds/
+*egg-info/
+*log
+ignore
+dist/

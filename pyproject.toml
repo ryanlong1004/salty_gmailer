@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "versioneer[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "salty_gmailer"
+description = "A python package to manage and automate your personal Gmail account."
+readme = "README.md"
+version = "0.0.1"
+dependencies = [
+    "PyYAML",
+    "google-api-python-client",
+    "google-auth-httplib2",
+    "google-auth-oauthlib",
+]
+authors = [{ name = "Ryan Long", email = "ryanlong1004@gmail.com" }]
+keywords = ["gmail", "email automation"]
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["black", "isort", "pip-tools", "pytest", "twine", "build"]
+
+
+[project.scripts]
+gmailer = "src.__main__:main"
+
+
+[project.urls]
+"Homepage" = "https://github.com/ryanlong1004/gmailer"
+"Bug Tracker" = "https://github.com/ryanlong1004/gmailer/issues"
+
+[tool.setuptools.packages]
+find = {} # Scan the project directory with the default parameters

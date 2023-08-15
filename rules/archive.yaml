@@ -1,0 +1,17 @@
+# https://support.google.com/mail/answer/7190?hl=en
+name: archive
+description: Archive old emails
+search:
+  - older_than: 7d
+  - from: "*uber* OR"
+  - has: noLabel_36
+add_labels:
+- Label_36
+remove_labels:
+- INBOX
+- UNREAD
+- IMPORTANT
+- STARRED
+
+
+

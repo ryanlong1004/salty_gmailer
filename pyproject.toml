@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "salty_gmailer"
 description = "A python package to manage and automate your personal Gmail account."
 readme = "README.md"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
     "PyYAML",
     "google-api-python-client",

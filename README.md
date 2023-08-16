@@ -1,5 +1,5 @@
 # Salty Gmailer
-![GitHub release (with filter)](https://img.shields.io/github/v/release/ryanlong1004/gmailer)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/ryanlong1004/salty_gmailer)
 
 Salty Gmailer is a configuration based Gmail automation tool. Configuration is based off of YAML files that utilize
 the Gmail search query (`q=...`) and the addition and subtraction of labels to manage emails.

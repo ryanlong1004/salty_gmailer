@@ -35,9 +35,9 @@ search:
 - older_than: 1m
 - from: "github_ OR"
 - from: notifications-noreply@linkedin.com
-  add_labels:
+add_labels:
 - TRASH
-  remove_labels:
+remove_labels:
 ```
 
 Currently, name and description are for logging purposes only.  

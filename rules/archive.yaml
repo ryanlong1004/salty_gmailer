@@ -4,6 +4,9 @@ description: Archive old emails
 search:
   - older_than: 7d
   - from: "*uber* OR"
+  - from: "*experian.com OR"
+  - from: "*noaa.gov OR"
+  - from: "*informeddelivery.usps.com OR"
   - has: noLabel_36
 add_labels:
 - Label_36

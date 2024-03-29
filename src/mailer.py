@@ -6,6 +6,7 @@
 from __future__ import print_function
 
 import base64
+import pathlib
 import json
 import os.path
 from email.message import EmailMessage
@@ -17,6 +18,7 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+import sys
 
 from src.logger import get_logger
 
@@ -29,6 +31,9 @@ SCOPES = [
     "https://www.googleapis.com/auth/gmail.settings.basic",
     # "https://www.googleapis.com/auth/gmail.metadata",
 ]
+
+home = pathlib.Path(os.path.dirname(sys.argv[0])).parent / "creds"
+print(home)
 
 
 class Labels(Enum):

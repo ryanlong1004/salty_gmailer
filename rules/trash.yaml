@@ -2,7 +2,8 @@
 name: Trash
 description: Sends messages to trash
 search:
-  - older_than: 1m
+  - older_than: 1h
+  - from: "*info.coinbase* OR"
   - from: "*github* OR"
   - from: "*isthereanydeal.com OR"
   - from: no-reply@accounts.google.com OR
@@ -19,7 +20,7 @@ search:
   - from: "*mail.thesatanictemple.com OR"
   - from: "*customerservice.ugi.com OR"
   - from: "*notification.capitalone.com OR"
-  - from: "*mail.coinbase.com OR"
+  - from: "*eyeappts.com OR"
   - from: "*dekudeals.com" 
   
 add_labels:

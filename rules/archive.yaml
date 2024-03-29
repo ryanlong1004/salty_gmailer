@@ -8,7 +8,6 @@ search:
   - from: "*noaa.gov OR"
   - from: "*informeddelivery.usps.com OR"
   - has: noLabel_36
-  mail.coinbase.com
 add_labels:
 - Label_36
 remove_labels:

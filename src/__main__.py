@@ -1,11 +1,16 @@
 """Main execution"""
 
 from pathlib import Path
+import os
+import sys
+
 
 from src.cli import get_cli_input, get_queue
 from src.logger import get_logger
 from src.mailer import Mailer
 from src.rule import Rule
+
+creds_path = Path(os.path.dirname(sys.argv[0])).parent / "creds"
 
 
 def main():

@@ -32,8 +32,7 @@ SCOPES = [
     # "https://www.googleapis.com/auth/gmail.metadata",
 ]
 
-home = pathlib.Path(os.path.dirname(sys.argv[0])).parent / "creds"
-print(home)
+creds_path = pathlib.Path(os.path.dirname(sys.argv[0])).parent / "creds"
 
 
 class Labels(Enum):
@@ -70,7 +69,7 @@ class Mailer:
     def service(self, **kwargs):
         """returns a bootstrapped service if one does not already exist"""
         if self._service is None:
-            token_path = kwargs.get("token_path", "./creds/token.json")
+            token_path = creds_path
             credentials_path = kwargs.get(
                 "credentials_path", "./creds/credentials.json"
             )

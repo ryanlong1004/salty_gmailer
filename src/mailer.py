@@ -86,6 +86,7 @@ class Mailer:
                 if creds and creds.expired and creds.refresh_token:
                     creds.refresh(Request())
                 else:
+                    print(credentials_path)
                     if not Path(credentials_path).exists():
                         raise FileNotFoundError(
                             "credentials.json is missing...  https://console.cloud.google.com"

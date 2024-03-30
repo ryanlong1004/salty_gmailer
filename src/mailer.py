@@ -32,7 +32,7 @@ SCOPES = [
     # "https://www.googleapis.com/auth/gmail.metadata",
 ]
 
-creds_path = pathlib.Path(os.path.dirname(sys.argv[0])).parent.parent / "creds"
+creds_path = pathlib.Path(os.path.dirname(sys.argv[0])).parent / "../" / "creds"
 
 
 class Labels(Enum):

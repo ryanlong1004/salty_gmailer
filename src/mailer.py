@@ -89,7 +89,7 @@ class Mailer:
                     print(credentials_path)
                     if not Path(credentials_path).exists():
                         raise FileNotFoundError(
-                            "credentials.json is missing...  https://console.cloud.google.com"
+                            f"credentials.json is missing...  {credentials_path}...https://console.cloud.google.com"
                         )
                     flow = InstalledAppFlow.from_client_secrets_file(
                         credentials_path, SCOPES

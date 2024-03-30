@@ -66,12 +66,14 @@ class Mailer:
         return self.service_user.settings()
 
     @property
-    def service(self, **kwargs):
+    def service(self):
         """returns a bootstrapped service if one does not already exist"""
         if self._service is None:
             token_path = creds_path
-            credentials_path = kwargs.get(
-                "credentials_path", "./creds/credentials.json"
+            credentials_path = (
+                pathlib.Path(os.path.dirname(sys.argv[0])).parent
+                / "creds"
+                / "credentials.json"
             )
             creds = None
             # The file token.json stores the user's access and refresh tokens, and is

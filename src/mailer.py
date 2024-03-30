@@ -79,14 +79,13 @@ class Mailer:
             # The file token.json stores the user's access and refresh tokens, and is
             # created automatically when the authorization flow completes for the first
             # time.
-            if os.path.exists(token_path):
-                creds = Credentials.from_authorized_user_file(token_path, SCOPES)
+            if os.path.exists(credentials_path):
+                creds = Credentials.from_authorized_user_file(credentials_path, SCOPES)
             # If there are no (valid) credentials available, let the user log in.
             if not creds or not creds.valid:
                 if creds and creds.expired and creds.refresh_token:
                     creds.refresh(Request())
                 else:
-                    print(credentials_path)
                     if not Path(credentials_path).exists():
                         raise FileNotFoundError(
                             f"credentials.json is missing...  {credentials_path}...https://console.cloud.google.com"

@@ -6,6 +6,9 @@ the Gmail search query (`q=...`) and the addition and subtraction of labels to m
 
 See [here](https://support.google.com/mail/answer/7190?hl=en) for the library of search operators supported.
 
+## Credentials
+[Google Cloud Console](https://console.cloud.google.com/apis/credentials)
+
 ## Usage
 ```
 usage: gmailer [-h] [paths ...]

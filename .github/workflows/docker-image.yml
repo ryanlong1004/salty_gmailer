@@ -32,3 +32,17 @@ jobs:
             --tag saltycatfish/salty_gmailer:$(date +%s) \
             --tag saltycatfish/salty_gmailer:latest \
             --push
+
+      - name: Build and push Docker image ARM64
+        run: |
+          echo "DOCKER_BUILDKIT=1" >> $GITHUB_ENV
+          docker buildx create --use
+          docker buildx build . \
+            --file Dockerfile \
+            --platform linux/arm64
+            --tag saltycatfish/salty_gmailer:arm64_$(date +%s) \
+            --tag saltycatfish/salty_gmailer:arm64_latest \
+            --push
+
+
+      # docker build --platform linux/arm64 -t {image_name}:{tag} .

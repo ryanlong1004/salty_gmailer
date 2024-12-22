@@ -40,7 +40,19 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 # Initialize FastAPI application
-app = FastAPI()
+app = FastAPI(
+    title="Salty Gmailer API",
+    summary="Salty Gmailer is a FastAPI-based project designed to interact with Gmail using a salty approach. This project aims to provide a unique and efficient way to manage your Gmail account.",
+    version="0.0.1",
+    # terms_of_service="http://example.com/terms/",
+    contact={
+        "name": "Ryan Long",
+        "url": "https://rlong.dev",
+    },
+    license_info={
+        "name": "MIT",
+        "url": "https://opensource.org/license/mit",
+    },)
 
 
 # Define data models for API requests using Pydantic

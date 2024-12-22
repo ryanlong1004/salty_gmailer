@@ -39,7 +39,7 @@ jobs:
           docker buildx create --use
           docker buildx build . \
             --file Dockerfile \
-            --platform linux/arm64
+            --platform 'linux/arm64' \
             --tag saltycatfish/salty_gmailer:arm64_$(date +%s) \
             --tag saltycatfish/salty_gmailer:arm64_latest \
             --push

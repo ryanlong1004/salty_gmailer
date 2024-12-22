@@ -1,6 +1,6 @@
 # Salty Gmailer
 
-[![Python application](https://github.com/ryanlong1004/salty_gmailer/actions/workflows/python-app.yml/badge.svg)](https://github.com/ryanlong1004/salty_gmailer/actions/workflows/python-app.yml)
+[![Python application](https://github.com/ryanlong1004/salty_gmailer/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/ryanlong1004/salty_gmailer/actions/workflows/python-app.yml)
 
 Salty Gmailer is a FastAPI-based project designed to interact with Gmail using a salty approach. This project aims to provide a unique and efficient way to manage your Gmail account.
 

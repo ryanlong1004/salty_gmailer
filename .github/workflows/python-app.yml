@@ -39,4 +39,4 @@ jobs:
         pytest
     - name: Format with black
       run: |
-        black
+        black *py
